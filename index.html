@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus | Premium Developer Platform</title>
+    <meta name="description" content="The ultimate platform for modern developers. Code, collaborate, and ship faster with AI-powered tools and enterprise-grade security.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="glow-pointer" id="glowPointer"></div>
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <div class="logo-mark">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <span>Nexus</span>
+            </a>
+            <div class="nav-links">
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#workflow" class="nav-link">Workflow</a>
+                <a href="#pricing" class="nav-link">Pricing</a>
+                <a href="#faq" class="nav-link">FAQ</a>
+            </div>
+            <div class="nav-actions">
+                <a href="#" class="btn btn-ghost">Log in</a>
+                <a href="#" class="btn btn-primary btn-magnetic">Get Started</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- 1. Hero -->
+        <section class="hero" id="hero">
+            <div class="hero-bg">
+                <div class="blob blob-1"></div>
+                <div class="blob blob-2"></div>
+                <div class="grid-overlay"></div>
+            </div>
+            
+            <div class="container hero-content">
+                <div class="hero-text-wrapper reveal-up">
+                    <div class="badge">Nexus 2.0 is here &rarr;</div>
+                    <h1 class="hero-title">
+                        Build software with <br>
+                        <span class="gradient-text type-effect" id="typewriter">Velocity</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        The complete developer platform to build, scale, and deliver secure software. Everything you need, unified in one elegant interface.
+                    </p>
+                    <div class="hero-cta">
+                        <a href="#" class="btn btn-primary btn-large btn-magnetic">Start Building Free</a>
+                        <a href="#" class="btn btn-secondary btn-large btn-magnetic">Contact Sales</a>
+                    </div>
+                </div>
+
+                <!-- Exploded View Container -->
+                <div class="hero-dashboard-wrapper" id="exploded-container">
+                    <div class="dashboard-scene" id="dashboard-scene">
+                        <div class="dash-layer dash-base">
+                            <div class="dash-header">
+                                <div class="dash-dots"><span></span><span></span><span></span></div>
+                                <div class="dash-search">Search projects, docs, and more...</div>
+                                <div class="dash-profile"></div>
+                            </div>
+                            <div class="dash-sidebar">
+                                <div class="sidebar-item active"></div>
+                                <div class="sidebar-item"></div>
+                                <div class="sidebar-item"></div>
+                                <div class="sidebar-item"></div>
+                            </div>
+                            <div class="dash-main">
+                                <div class="dash-widget w-large"></div>
+                                <div class="dash-widget w-small"></div>
+                                <div class="dash-widget w-small"></div>
+                                <div class="dash-widget w-medium"></div>
+                            </div>
+                        </div>
+
+                        <!-- Exploding Parts -->
+                        <div class="dash-part part-terminal" data-explode-x="-250" data-explode-y="-150" data-explode-z="300" data-explode-rx="-15" data-explode-ry="-25">
+                            <div class="term-header">build-server - bash</div>
+                            <div class="term-body">
+                                <span>$ npm run build</span>
+                                <span class="success">✔ Compiling assets... Done in 2.4s</span>
+                                <span class="success">✔ Creating production build... Done</span>
+                                <span>$ deploy --target production</span>
+                                <span class="blink">_</span>
+                            </div>
+                        </div>
+
+                        <div class="dash-part part-repo" data-explode-x="280" data-explode-y="-80" data-explode-z="250" data-explode-rx="10" data-explode-ry="30">
+                            <h4>nexus-core</h4>
+                            <p>Primary API and orchestration layer.</p>
+                            <div class="repo-meta">
+                                <span><span class="dot ts"></span>TypeScript</span>
+                                <span>★ 4.2k</span>
+                            </div>
+                        </div>
+
+                        <div class="dash-part part-pr" data-explode-x="-180" data-explode-y="180" data-explode-z="280" data-explode-rx="20" data-explode-ry="-10">
+                            <div class="pr-status merged">Merged</div>
+                            <h4>Feature: Add OIDC Support</h4>
+                            <p>#482 by @devteam</p>
+                        </div>
+
+                        <div class="dash-part part-ai" data-explode-x="240" data-explode-y="200" data-explode-z="350" data-explode-rx="15" data-explode-ry="15">
+                            <div class="ai-header">Nexus AI</div>
+                            <div class="ai-chat">
+                                <div class="ai-msg user">Optimize this query?</div>
+                                <div class="ai-msg bot">I suggest adding an index on `created_at`...</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Trusted Companies -->
+        <section class="trusted" id="trusted">
+            <div class="container">
+                <p class="trusted-text reveal-up">Trusted by innovative teams worldwide</p>
+                <div class="logo-marquee">
+                    <div class="marquee-track">
+                        <!-- Logos -->
+                        <div class="logo-item">Acme Corp</div>
+                        <div class="logo-item">Globex</div>
+                        <div class="logo-item">Soylent</div>
+                        <div class="logo-item">Initech</div>
+                        <div class="logo-item">Umbrella</div>
+                        <div class="logo-item">Stark Ind.</div>
+                        <div class="logo-item">Wayne Ent.</div>
+                        <!-- Duplicate for seamless loop -->
+                        <div class="logo-item">Acme Corp</div>
+                        <div class="logo-item">Globex</div>
+                        <div class="logo-item">Soylent</div>
+                        <div class="logo-item">Initech</div>
+                        <div class="logo-item">Umbrella</div>
+                        <div class="logo-item">Stark Ind.</div>
+                        <div class="logo-item">Wayne Ent.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Features -->
+        <section class="features" id="features">
+            <div class="container">
+                <div class="section-header reveal-up">
+                    <h2 class="section-title">Engineered for perfection.</h2>
+                    <p class="section-desc">Every tool you need to craft exceptional software, designed with obsessive attention to detail.</p>
+                </div>
+
+                <div class="feature-grid">
+                    <div class="feature-card feature-large glass-card reveal-up" style="--delay: 0.1s">
+                        <div class="card-glow"></div>
+                        <div class="card-content">
+                            <h3>Lightning Fast CI/CD</h3>
+                            <p>Automate your workflow with pipelines that run at the speed of thought. Millisecond cold starts.</p>
+                            <div class="feature-visual visual-pipeline">
+                                <div class="pipe-node success"></div>
+                                <div class="pipe-line"></div>
+                                <div class="pipe-node success"></div>
+                                <div class="pipe-line"></div>
+                                <div class="pipe-node pulse"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="feature-card glass-card reveal-up" style="--delay: 0.2s">
+                        <div class="card-glow"></div>
+                        <div class="card-content">
+                            <h3>Branch Previews</h3>
+                            <p>Every commit gets a live, shareable environment instantly.</p>
+                            <div class="feature-visual visual-preview">
+                                <div class="preview-browser">
+                                    <div class="browser-header">
+                                        <div class="dash-dots"><span></span><span></span><span></span></div>
+                                        <div class="browser-url">preview.nexus.dev/pr-123</div>
+                                    </div>
+                                    <div class="browser-body"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="feature-card glass-card reveal-up" style="--delay: 0.3s">
+                        <div class="card-glow"></div>
+                        <div class="card-content">
+                            <h3>Edge Analytics</h3>
+                            <p>Real-time insights on performance and user behavior.</p>
+                            <div class="feature-visual visual-chart">
+                                <div class="chart-bar" style="height: 40%"></div>
+                                <div class="chart-bar" style="height: 70%"></div>
+                                <div class="chart-bar" style="height: 50%"></div>
+                                <div class="chart-bar" style="height: 90%"></div>
+                                <div class="chart-bar" style="height: 60%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Workflow -->
+        <section class="workflow" id="workflow">
+            <div class="container">
+                <div class="workflow-layout">
+                    <div class="workflow-content reveal-left">
+                        <h2 class="section-title">The seamless flow.</h2>
+                        <p class="section-desc">From ideation to production, experience a frictionless developer journey.</p>
+                        <div class="workflow-steps">
+                            <div class="step-item active">
+                                <div class="step-icon">1</div>
+                                <div class="step-text">
+                                    <h4>Code</h4>
+                                    <p>Write with AI-powered completions in our cloud editor.</p>
+                                </div>
+                            </div>
+                            <div class="step-item">
+                                <div class="step-icon">2</div>
+                                <div class="step-text">
+                                    <h4>Review</h4>
+                                    <p>Collaborate with inline discussions and automated checks.</p>
+                                </div>
+                            </div>
+                            <div class="step-item">
+                                <div class="step-icon">3</div>
+                                <div class="step-text">
+                                    <h4>Deploy</h4>
+                                    <p>Ship to global edge networks with zero configuration.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="workflow-visual reveal-right">
+                        <div class="timeline-visual">
+                            <!-- SVG Animated Line -->
+                            <svg viewBox="0 0 100 400" class="timeline-svg">
+                                <path d="M50 0 L50 400" stroke="#1f2937" stroke-width="4" stroke-dasharray="8 8" fill="none"/>
+                                <path d="M50 0 L50 400" stroke="url(#lineGradient)" stroke-width="4" fill="none" class="timeline-progress"/>
+                                <circle cx="50" cy="50" r="12" fill="#0D1117" stroke="#58A6FF" stroke-width="4"/>
+                                <circle cx="50" cy="200" r="12" fill="#0D1117" stroke="#30363d" stroke-width="4" class="timeline-node"/>
+                                <circle cx="50" cy="350" r="12" fill="#0D1117" stroke="#30363d" stroke-width="4" class="timeline-node"/>
+                                <defs>
+                                    <linearGradient id="lineGradient" x1="0" y1="0" x2="0" y2="1">
+                                        <stop offset="0%" stop-color="#58A6FF" />
+                                        <stop offset="100%" stop-color="#7C3AED" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. AI Coding Assistant -->
+        <section class="ai-section" id="ai">
+            <div class="container">
+                <div class="ai-grid">
+                    <div class="ai-editor-wrapper reveal-up glass-card">
+                        <div class="editor-header">
+                            <div class="dash-dots"><span></span><span></span><span></span></div>
+                            <span>server.js</span>
+                        </div>
+                        <div class="editor-body code-font">
+                            <span class="keyword">async function</span> <span class="func">fetchUserData</span>(userId) {<br>
+                            &nbsp;&nbsp;<span class="comment">// AI suggested optimization</span><br>
+                            &nbsp;&nbsp;<span class="keyword">const</span> cacheKey = <span class="string">`user:${userId}`</span>;<br>
+                            &nbsp;&nbsp;<span class="keyword">const</span> cached = <span class="keyword">await</span> redis.get(cacheKey);<br>
+                            <div class="ai-suggestion">
+                                &nbsp;&nbsp;<span class="keyword">if</span> (cached) <span class="keyword">return</span> JSON.parse(cached);<br>
+                                &nbsp;&nbsp;<span class="keyword">const</span> data = <span class="keyword">await</span> db.users.find(userId);
+                            </div>
+                            &nbsp;&nbsp;<span class="keyword">return</span> data;<br>
+                            }
+                        </div>
+                        <div class="ai-floating-panel pulse-soft">
+                            <div class="ai-icon-bg">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                            </div>
+                            <span>Suggestion applied. +40ms performance gain.</span>
+                        </div>
+                    </div>
+                    <div class="ai-text reveal-left">
+                        <div class="badge-accent">Nexus AI</div>
+                        <h2 class="section-title">Your brilliant pair programmer.</h2>
+                        <p class="section-desc">Context-aware code generation, automated refactoring, and intelligent test generation. It's like having a senior engineer constantly looking over your shoulder.</p>
+                        <ul class="feature-list">
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                                Multi-file context awareness
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                                Security vulnerability detection
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                                Automated documentation generation
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Security -->
+        <section class="security" id="security">
+            <div class="container">
+                <div class="section-header text-center reveal-up">
+                    <h2 class="section-title">Fort Knox for your code.</h2>
+                    <p class="section-desc">Enterprise-grade security woven into every layer of the platform.</p>
+                </div>
+                <div class="security-dashboard glass-card reveal-up">
+                    <div class="sec-sidebar">
+                        <div class="sec-item active">Overview</div>
+                        <div class="sec-item">Vulnerabilities</div>
+                        <div class="sec-item">Secrets</div>
+                        <div class="sec-item">Access</div>
+                    </div>
+                    <div class="sec-main">
+                        <div class="sec-stats">
+                            <div class="sec-stat-card">
+                                <h5>Security Score</h5>
+                                <div class="score excellent">98/100</div>
+                            </div>
+                            <div class="sec-stat-card">
+                                <h5>Dependencies scanned</h5>
+                                <div class="score">1,204</div>
+                            </div>
+                            <div class="sec-stat-card">
+                                <h5>Active Threats</h5>
+                                <div class="score safe">0</div>
+                            </div>
+                        </div>
+                        <div class="sec-scan-visual">
+                            <div class="scan-line"></div>
+                            <div class="code-blocks">
+                                <span></span><span></span><span class="safe"></span><span></span><span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. Collaboration & 8. Code Review -->
+        <section class="collaboration" id="collaboration">
+            <div class="container">
+                <div class="collab-layout">
+                    <div class="collab-text reveal-right">
+                        <h2 class="section-title">Built for teams.</h2>
+                        <p class="section-desc">Review code, discuss architectural changes, and ship features together in real-time.</p>
+                        
+                        <div class="pr-card glass-card mt-4 hover-lift">
+                            <div class="pr-header">
+                                <span class="status-open">Open</span>
+                                <h4>Refactor auth flow</h4>
+                            </div>
+                            <div class="pr-reviewers">
+                                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=64&h=64" alt="Reviewer" class="avatar" loading="lazy">
+                                <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=64&h=64" alt="Reviewer" class="avatar" loading="lazy">
+                                <span class="avatar-more">+2</span>
+                            </div>
+                            <div class="pr-comment">
+                                <strong>@sarah:</strong> Looks solid. Let's merge this after tests pass.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="collab-visual">
+                        <div class="review-node r-1 reveal-up" style="--delay: 0.1s">
+                            <div class="icon">💻</div>
+                            Commit #a1b2c3d
+                        </div>
+                        <div class="review-node r-2 reveal-up" style="--delay: 0.2s">
+                            <div class="icon">✅</div>
+                            CI Tests Pass
+                        </div>
+                        <div class="review-node r-3 reveal-up" style="--delay: 0.3s">
+                            <div class="icon">👀</div>
+                            Approval Required
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 9. Open Source -->
+        <section class="opensource" id="opensource">
+            <div class="container">
+                <div class="section-header text-center reveal-up">
+                    <h2 class="section-title">Home for Open Source.</h2>
+                    <p class="section-desc">Join millions of developers building the future of software.</p>
+                </div>
+                <div class="repo-grid">
+                    <div class="repo-card glass-card hover-lift reveal-up" style="--delay: 0.1s">
+                        <div class="repo-name">nexus / ui-kit</div>
+                        <p class="repo-desc">A beautiful, accessible React component library.</p>
+                        <div class="repo-stats">
+                            <span class="lang"><span class="dot ts"></span>TypeScript</span>
+                            <span>★ 12k</span>
+                        </div>
+                    </div>
+                    <div class="repo-card glass-card hover-lift reveal-up" style="--delay: 0.2s">
+                        <div class="repo-name">nexus / core</div>
+                        <p class="repo-desc">The high-performance Rust core engine.</p>
+                        <div class="repo-stats">
+                            <span class="lang"><span class="dot rust"></span>Rust</span>
+                            <span>★ 8.5k</span>
+                        </div>
+                    </div>
+                    <div class="repo-card glass-card hover-lift reveal-up" style="--delay: 0.3s">
+                        <div class="repo-name">nexus / cli</div>
+                        <p class="repo-desc">Command line interface for Nexus platform.</p>
+                        <div class="repo-stats">
+                            <span class="lang"><span class="dot go"></span>Go</span>
+                            <span>★ 4.2k</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 10. Statistics -->
+        <section class="statistics" id="statistics">
+            <div class="container">
+                <div class="stat-grid">
+                    <div class="stat-box glass-card reveal-up" style="--delay: 0.1s">
+                        <div class="stat-number"><span class="counter" data-target="99.99">0</span><span class="stat-suffix">%</span></div>
+                        <div class="stat-label">Uptime SLA</div>
+                    </div>
+                    <div class="stat-box glass-card reveal-up" style="--delay: 0.2s">
+                        <div class="stat-number"><span class="counter" data-target="50">0</span><span class="stat-suffix">M+</span></div>
+                        <div class="stat-label">Deployments</div>
+                    </div>
+                    <div class="stat-box glass-card reveal-up" style="--delay: 0.3s">
+                        <div class="stat-number"><span class="counter" data-target="150">0</span><span class="stat-suffix">ms</span></div>
+                        <div class="stat-label">Global Latency</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 11. Testimonials -->
+        <section class="testimonials" id="testimonials">
+            <div class="container">
+                <div class="section-header text-center reveal-up">
+                    <h2 class="section-title">Loved by engineers.</h2>
+                </div>
+                <div class="testimonial-grid">
+                    <div class="testimonial-card glass-card hover-lift reveal-up" style="--delay: 0.1s">
+                        <p class="quote">"Nexus has completely transformed how our team ships code. The AI assistant alone saves us hours every week."</p>
+                        <div class="author">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=64&h=64" alt="Author" loading="lazy">
+                            <div>
+                                <h5>Elena Rodriguez</h5>
+                                <span>CTO, TechFlow</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card glass-card hover-lift reveal-up" style="--delay: 0.2s">
+                        <p class="quote">"The UI is a masterclass in design. It's rare to find a developer tool that is this powerful yet this beautiful to use."</p>
+                        <div class="author">
+                            <img src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?auto=format&fit=crop&w=64&h=64" alt="Author" loading="lazy">
+                            <div>
+                                <h5>David Chen</h5>
+                                <span>Lead Architect, Voxel</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card glass-card hover-lift reveal-up" style="--delay: 0.3s">
+                        <p class="quote">"From local dev to edge deployment in seconds. It's the platform I've been waiting for my entire career."</p>
+                        <div class="author">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=64&h=64" alt="Author" loading="lazy">
+                            <div>
+                                <h5>Sarah Jenkins</h5>
+                                <span>Senior Engineer, Stripe</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 12. Pricing -->
+        <section class="pricing" id="pricing">
+            <div class="container">
+                <div class="section-header text-center reveal-up">
+                    <h2 class="section-title">Transparent pricing.</h2>
+                    <p class="section-desc">Start for free, scale when you need to.</p>
+                </div>
+                <div class="pricing-grid">
+                    <div class="pricing-card glass-card hover-lift reveal-up" style="--delay: 0.1s">
+                        <div class="plan-name">Hobby</div>
+                        <div class="plan-price">$0<span>/mo</span></div>
+                        <ul class="plan-features">
+                            <li>Up to 3 projects</li>
+                            <li>Community support</li>
+                            <li>Standard CI/CD</li>
+                            <li>1GB Storage</li>
+                        </ul>
+                        <a href="#" class="btn btn-ghost btn-block">Get Started</a>
+                    </div>
+                    
+                    <div class="pricing-card pricing-popular glass-card hover-lift reveal-up" style="--delay: 0.2s">
+                        <div class="popular-badge">Most Popular</div>
+                        <div class="plan-name">Pro</div>
+                        <div class="plan-price">$29<span>/mo</span></div>
+                        <ul class="plan-features">
+                            <li>Unlimited projects</li>
+                            <li>Nexus AI Assistant</li>
+                            <li>Priority support</li>
+                            <li>Advanced Analytics</li>
+                            <li>50GB Storage</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary btn-block btn-magnetic">Start Free Trial</a>
+                    </div>
+
+                    <div class="pricing-card glass-card hover-lift reveal-up" style="--delay: 0.3s">
+                        <div class="plan-name">Enterprise</div>
+                        <div class="plan-price">Custom</div>
+                        <ul class="plan-features">
+                            <li>Custom SLAs</li>
+                            <li>Dedicated account manager</li>
+                            <li>On-premise deployment</li>
+                            <li>Advanced security compliance</li>
+                            <li>Unlimited Storage</li>
+                        </ul>
+                        <a href="#" class="btn btn-ghost btn-block">Contact Sales</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 13. FAQ -->
+        <section class="faq" id="faq">
+            <div class="container">
+                <div class="section-header text-center reveal-up">
+                    <h2 class="section-title">Frequently Asked Questions</h2>
+                </div>
+                <div class="faq-list">
+                    <div class="faq-item glass-card reveal-up">
+                        <div class="faq-question">
+                            <h4>Does Nexus integrate with my existing tools?</h4>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, Nexus offers native integrations with Jira, Slack, Linear, Datadog, and supports custom webhooks for any other platform in your stack.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item glass-card reveal-up">
+                        <div class="faq-question">
+                            <h4>How secure is the AI Coding Assistant?</h4>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Your code never leaves your secure tenant. We do not use your proprietary code to train our base models. Enterprise plans offer complete air-gapped deployments.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item glass-card reveal-up">
+                        <div class="faq-question">
+                            <h4>Can I migrate from GitHub or GitLab easily?</h4>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Absolutely. Our one-click migration tool imports repositories, issues, PRs, and wiki content with zero downtime.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 14. CTA -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-banner glass-card reveal-up">
+                    <div class="cta-bg-glow"></div>
+                    <h2>Ready to build the future?</h2>
+                    <p>Join over 500,000 developers already using Nexus.</p>
+                    <div class="cta-actions">
+                        <a href="#" class="btn btn-primary btn-large btn-magnetic">Get Started for Free</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 15. Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <div class="logo-mark">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <span>Nexus</span>
+                    </div>
+                    <p class="footer-desc">The premium platform for modern software development teams.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4l11.733 16h4.267l-11.733 -16z" /><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" /></svg>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" /></svg>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0 -2 -2 2 2 0 0 0 -2 2v7h-4v-7a6 6 0 0 1 6 -6z" /><rect x="2" y="9" width="4" height="12" /><circle cx="4" cy="4" r="2" /></svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Product</h4>
+                    <a href="#">Features</a>
+                    <a href="#">Integrations</a>
+                    <a href="#">Pricing</a>
+                    <a href="#">Changelog</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <a href="#">Documentation</a>
+                    <a href="#">API Reference</a>
+                    <a href="#">Blog</a>
+                    <a href="#">Community</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <a href="#">About Us</a>
+                    <a href="#">Careers</a>
+                    <a href="#">Legal</a>
+                    <a href="#">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Nexus Inc. All rights reserved.</p>
+                <div class="footer-status">
+                    <span class="status-dot"></span> All systems operational
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
